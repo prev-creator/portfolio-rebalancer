@@ -2,7 +2,7 @@
 
 > **Tax-efficient portfolio rebalancing tool with cash-only optimization**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://zero-tax-rebalancer.streamlit.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
@@ -10,7 +10,7 @@
 
 ---
 
-## English
+## English 
 
 ### 🎯 What is Portfolio Rebalancer?
 
@@ -31,13 +31,13 @@ Portfolio Rebalancer is a **free, open-source tool** that helps investors mainta
 ### 🚀 Quick Start
 
 #### Try it Online
-👉 **[Launch App](https://your-app-url.streamlit.app)** - No installation required!
+👉 **[Launch App](https://zero-tax-rebalancer.streamlit.app)** - No installation required!
 
 #### Run Locally
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio-rebalancer.git
+git clone https://github.com/prev-creator/portfolio-rebalancer.git
 cd portfolio-rebalancer
 
 # Install dependencies
@@ -122,7 +122,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### 📧 Contact
 
-- [GitHub Discussions](https://github.com/prev-creator/portfolio-rebalancer/discussions)
+- **Report Bugs:** [GitHub Issues](https://github.com/prev-creator/portfolio-rebalancer/issues)
+- **GitHub:** [@prev-creator](https://github.com/prev-creator)
 
 ### ⭐ Star History
 
@@ -157,7 +158,7 @@ Portfolio Rebalancer è uno **strumento gratuito e open-source** che aiuta gli i
 
 ```bash
 # Clona il repository
-git clone https://github.com/yourusername/portfolio-rebalancer.git
+git clone https://github.com/prev-creator/portfolio-rebalancer.git
 cd portfolio-rebalancer
 
 # Installa le dipendenze
@@ -206,8 +207,9 @@ Questo progetto è rilasciato sotto licenza MIT - vedi il file [LICENSE](LICENSE
 
 ### 📧 Contatti
 
-- [GitHub Discussions](https://github.com/prev-creator/portfolio-rebalancer/discussions)
+- **Segnala Bug:** [GitHub Issues](https://github.com/prev-creator/portfolio-rebalancer/issues)
+- **GitHub:** [@prev-creator](https://github.com/prev-creator)
 
 ---
 
-**Made with ❤️ by [Andrea]**
+**Made with ❤️ by Andrea**
