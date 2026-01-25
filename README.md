@@ -28,6 +28,29 @@ Portfolio Rebalancer is a **free, open-source tool** that helps investors mainta
 - 🌐 **Bilingual** - English and Italian interface
 - 🎨 **Professional UI** - Clean, modern interface with sidebar statistics
 
+<p align="center">
+  <img src="images/dashboard.png" width="100%" alt="Portfolio Dashboard">
+</p>
+
+---
+
+### 📸 Key Features in Action
+
+#### 1. Easy Asset Search
+*Search by ticker (supports Milan, Xetra, London, NYSE...) and get live prices immediately.*
+<p align="center">
+  <img src="images/search.png" width="100%" alt="Search Interface">
+</p>
+
+#### 2. Tax-Efficient Rebalancing
+*The "Cash-Only" engine calculates the perfect buy order to fix your allocation without selling.*
+<p align="center">
+  <img src="images/rebalancing.png" width="100%" alt="Rebalancing Result">
+</p>
+
+---
+
+
 ### 🚀 Quick Start
 
 #### Try it Online
@@ -50,7 +73,7 @@ streamlit run app.py
 ### 📖 How to Use
 
 1. **Set Target Allocation**
-   - Define your target percentages (e.g., 80% Stocks, 20% Bonds)
+   - Define your target percentages (e.g., 80% Stocks, 10% Bonds, 10% Alternatives)
    - Total must equal 100%
 
 2. **Add Portfolio Items**
@@ -70,15 +93,30 @@ streamlit run app.py
 
 ### 💡 Example Use Case
 
-**Current Portfolio:** €10,000
-- Stocks: 60% (Target: 80%)
-- Bonds: 40% (Target: 20%)
+**Scenario:**
+You have a portfolio of **€19,595** and **€2,000** of fresh cash to invest.
+Your allocation is drifting from your targets:
 
-**New Cash:** €2,000
+| Asset Class | Target | Current | Status |
+| :--- | :--- | :--- | :--- |
+| 🌍 **Stocks** | 80% | 86.2% | 🔼 Overweight |
+| 🛡️ **Bonds** | 10% | 7.5% | 🔻 Underweight |
+| 💎 **Alternatives** | 10% | 6.2% | 🔻 Underweight |
 
-**Traditional Rebalancing:** Sell €2,000 bonds → Pay capital gains tax 😞
+**The Problem:**
+Stocks have run too much! To fix this perfectly (to get back to 80%), traditional math would force you to **sell** stocks, triggering capital gains taxes 💸.
 
-**Cash-Only Rebalancing:** Buy €2,000 stocks → No taxes! 🎉
+**The Solution (Cash-Only Mode):**
+You don't want to sell. You just want to use your **€2,000** cash intelligently.
+The tool calculates exactly how to distribute the new cash to boost the "laggards" (Bonds & Alternatives) and buy just enough Stocks to not dilute them too much.
+
+**Result (as seen in screenshots):**
+- 🛒 Buy **€936** of Alternatives (SGLD) → *Pumps it up +3.76%*
+- 🛒 Buy **€682** of Bonds (AGGH) → *Pumps it up +2.46%*
+- 🛒 Buy **€381** of Stocks (SWDA/EIMI) → *Keeps it balanced*
+- **Tax Bill: €0.00** 🎉
+
+*(Note: Market prices and portfolio values in this example are from Jan 25, 2026)**
 
 ### 🛠️ Tech Stack
 
@@ -152,7 +190,7 @@ Portfolio Rebalancer è uno **strumento gratuito e open-source** che aiuta gli i
 ### 🚀 Avvio Rapido
 
 #### Prova Online
-👉 **[Avvia App](https://your-app-url.streamlit.app)** - Nessuna installazione richiesta!
+👉 **[Avvia App](https://zero-tax-rebalancer.streamlit.app)** - Nessuna installazione richiesta!
 
 #### Esegui Localmente
 
@@ -171,7 +209,7 @@ streamlit run app.py
 ### 📖 Come Usarlo
 
 1. **Imposta Allocazione Target**
-   - Definisci le percentuali target (es: 80% Azionario, 20% Obbligazionario)
+   - Definisci le percentuali target (es: 80% Azionario, 10% Obbligazionario, 10% Alternative)
    - Il totale deve essere 100%
 
 2. **Aggiungi Titoli al Portfolio**
@@ -191,15 +229,29 @@ streamlit run app.py
 
 ### 💡 Caso d'Uso di Esempio
 
-**Portfolio Attuale:** €10.000
-- Azionario: 60% (Target: 80%)
-- Obbligazionario: 40% (Target: 20%)
+**Scenario:**
+Hai un portafoglio di **€19.595** e **€2.000** di nuova liquidità.
+La tua allocazione sta deviando dai target:
 
-**Nuova Liquidità:** €2.000
+| Asset Class | Target | Attuale | Status |
+| :--- | :--- | :--- | :--- |
+| 🌍 **Azionario** | 80% | 86,2% | 🔼 Sovrapesato |
+| 🛡️ **Obbligazionario** | 10% | 7,5% | 🔻 Sottopesato |
+| 💎 **Alternative** | 10% | 6,2% | 🔻 Sottopesato |
 
-**Ribilanciamento Tradizionale:** Vendi €2.000 obbligazioni → Paga tasse su plusvalenze 😞
+**Il Problema:**
+L'azionario è salito troppo! Per tornare all'80% perfetto, la matematica tradizionale ti direbbe di **vendere** azioni, pagando tasse sulle plusvalenze 💸.
 
-**Ribilanciamento Cash-Only:** Acquista €2.000 azioni → Nessuna tassa! 🎉
+**La Soluzione (Cash-Only):**
+Il tool calcola come distribuire i tuoi **€2.000** per spingere solo gli asset rimasti indietro, avvicinandoti al target senza vendere nulla.
+
+**Risultato:**
+- 🛒 Compra **€936** di Alternative (SGLD)
+- 🛒 Compra **€682** di Obbligazioni (AGGH)
+- 🛒 Compra **€381** di Azionario (SWDA/EIMI)
+- **Tasse pagate: €0.00** 🎉
+
+*(Nota: I prezzi di mercato e i valori del portafoglio in questo esempio sono aggiornati al 25 Gen 2026)*
 
 ### 📄 Licenza
 
