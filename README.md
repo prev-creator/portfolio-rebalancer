@@ -3,7 +3,7 @@
 > **Tax-efficient portfolio rebalancing tool with cash-only optimization**
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://zero-tax-rebalancer.streamlit.app)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 [English](#english) | [Italiano](#italiano)
@@ -141,7 +141,7 @@ matplotlib>=3.7.0
 
 ### 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to sub a Pull Request.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -151,7 +151,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ### 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU Affero General Public License v3.0 (AGPLv3) - see the [LICENSE](LICENSE) file for details.
 
 ### 🙏 Acknowledgments
 
@@ -255,7 +255,7 @@ Il tool calcola come distribuire i tuoi **€2.000** per spingere solo gli asset
 
 ### 📄 Licenza
 
-Questo progetto è rilasciato sotto licenza MIT - vedi il file [LICENSE](LICENSE) per dettagli.
+Questo progetto è distribuito con licenza GNU Affero General Public License v3.0 (AGPLv3) - vedi il file [LICENSE](LICENSE) per dettagli.
 
 ### 📧 Contatti
 
