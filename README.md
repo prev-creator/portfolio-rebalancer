@@ -2,7 +2,7 @@
 
 > **Tax-efficient portfolio rebalancing tool with cash-only optimization**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://zero-tax-rebalancer.streamlit.app)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/waveflow/portfolio-rebalancer)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
@@ -54,7 +54,7 @@ Portfolio Rebalancer is a **free, open-source tool** that helps investors mainta
 ### 🚀 Quick Start
 
 #### Try it Online
-👉 **[Launch App](https://zero-tax-rebalancer.streamlit.app)** - No installation required!
+👉 **[Launch App](https://huggingface.co/spaces/waveflow/portfolio-rebalancer)** - No installation required!
 
 #### Run Locally
 
@@ -190,7 +190,7 @@ Portfolio Rebalancer è uno **strumento gratuito e open-source** che aiuta gli i
 ### 🚀 Avvio Rapido
 
 #### Prova Online
-👉 **[Avvia App](https://zero-tax-rebalancer.streamlit.app)** - Nessuna installazione richiesta!
+👉 **[Avvia App](https://huggingface.co/spaces/waveflow/portfolio-rebalancer)** - Nessuna installazione richiesta!
 
 #### Esegui Localmente
 
