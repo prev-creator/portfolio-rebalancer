@@ -10,12 +10,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Push to HuggingFace Hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "github-actions"
           git remote add hf https://waveflow:$HF_TOKEN@huggingface.co/spaces/waveflow/portfolio-rebalancer
-          # Remove images folder from the push using a temporary branch
-          git rm -r --cached images/
-          git commit -m "ci: exclude images from HF sync" || echo "Nothing to commit"
-          git push hf main --force
+          
+          # Create orphan branch without git history (no binary files in history)
+          git checkout --orphan hf-deploy
+          git rm -rf images/
+          git add .
+          git commit -m "deploy: sync from GitHub"
+          git push hf hf-deploy:main --force
