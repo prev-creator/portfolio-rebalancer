@@ -19,9 +19,24 @@ jobs:
           git config user.name "github-actions"
           git remote add hf https://waveflow:$HF_TOKEN@huggingface.co/spaces/waveflow/portfolio-rebalancer
           
-          # Create orphan branch without git history (no binary files in history)
+          # Create orphan branch without git history
           git checkout --orphan hf-deploy
           git rm -rf images/
+          
+          # Overwrite README with HF Space config
+          cat > README.md << 'EOF'
+          ---
+          title: Portfolio Rebalancer
+          emoji: 📊
+          colorFrom: blue
+          colorTo: green
+          sdk: streamlit
+          sdk_version: "1.32.2"
+          app_file: app.py
+          pinned: false
+          ---
+          EOF
+          
           git add .
           git commit -m "deploy: sync from GitHub"
           git push hf hf-deploy:main --force
