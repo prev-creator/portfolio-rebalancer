@@ -27,31 +27,7 @@ from streamlit_option_menu import option_menu
 
 # ==================== ANALYTICS ====================
 def track_pageview():
-    measurement_id = os.environ.get("GA_MEASUREMENT_ID", "")
-    api_secret = os.environ.get("GA_API_SECRET", "")
-    if not measurement_id or not api_secret:
-        return
-    if st.session_state.get("_tracked"):
-        return
-    if "client_id" not in st.session_state:
-        st.session_state.client_id = str(uuid.uuid4())
-
-    # Capture values before threading (can't access session_state from thread)
-    mid, secret, cid = measurement_id, api_secret, st.session_state.client_id
-
-    def _send():
-        try:
-            requests.post(
-                f"https://www.google-analytics.com/mp/collect"
-                f"?measurement_id={mid}&api_secret={secret}",
-                json={"client_id": cid, "events": [{"name": "page_view"}]},
-                timeout=2
-            )
-        except:
-            pass
-
-    threading.Thread(target=_send, daemon=True).start()
-    st.session_state["_tracked"] = True
+    pass  # temporarily disabled
 
 # ==================== TRANSLATIONS ====================
 TRANSLATIONS = {
