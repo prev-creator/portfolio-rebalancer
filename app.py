@@ -48,8 +48,6 @@ def track_pageview():
         }
     )
 
-track_pageview()
-
 # ==================== TRANSLATIONS ====================
 TRANSLATIONS = {
     'en': {
@@ -202,6 +200,9 @@ for k, v in defaults.items():
 
 if 'targets' not in st.session_state:
     st.session_state.targets = dict(zip(st.session_state.df_targets["Asset Class"], st.session_state.df_targets["% Target"]))
+
+# ==================== TRACKING ====================
+track_pageview()
 
 # ==================== HELPER FUNCTIONS ====================
 @st.cache_data(ttl=3600)
