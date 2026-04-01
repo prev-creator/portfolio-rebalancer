@@ -23,7 +23,7 @@ jobs:
           git checkout --orphan hf-deploy
           git rm -rf images/
           
-          # Overwrite README with HF Space config
+          # Overwrite README with HF Space config, pay attention to sdk_version
           cat > README.md << 'EOF'
           ---
           title: Portfolio Rebalancer
@@ -31,7 +31,7 @@ jobs:
           colorFrom: blue
           colorTo: green
           sdk: streamlit
-          sdk_version: "1.32.2"
+          sdk_version: "1.42.0"
           app_file: app.py
           pinned: false
           ---
