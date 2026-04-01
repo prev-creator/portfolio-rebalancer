@@ -31,7 +31,7 @@ def inject_ga():
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
+          gtag('config', 'G-BN42QX8MZT');
         </script>
     """, height=0)
 
