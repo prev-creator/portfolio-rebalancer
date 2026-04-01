@@ -25,7 +25,7 @@ import streamlit.components.v1 as components
 
 # ==================== ANALYTICS ====================
 def inject_ga():
-    components.html("""
+    st.html("""
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN42QX8MZT"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -33,7 +33,7 @@ def inject_ga():
           gtag('js', new Date());
           gtag('config', 'G-BN42QX8MZT');
         </script>
-    """, height=0)
+    """)
 
 inject_ga()
 
