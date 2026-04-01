@@ -15,4 +15,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git remote add hf https://waveflow:$HF_TOKEN@huggingface.co/spaces/waveflow/portfolio-rebalancer
-          git push hf main --force -- ':!images/'
+          # Remove images folder from the push using a temporary branch
+          git rm -r --cached images/
+          git commit -m "ci: exclude images from HF sync" || echo "Nothing to commit"
+          git push hf main --force
