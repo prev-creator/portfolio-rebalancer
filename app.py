@@ -21,6 +21,21 @@ import plotly.graph_objects as go
 import requests
 from typing import List, Dict
 from streamlit_option_menu import option_menu
+import streamlit.components.v1 as components
+
+# ==================== ANALYTICS ====================
+def inject_ga():
+    components.html("""
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN42QX8MZT"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        </script>
+    """, height=0)
+
+inject_ga()
 
 # ==================== TRANSLATIONS ====================
 TRANSLATIONS = {
