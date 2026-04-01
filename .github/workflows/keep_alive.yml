@@ -1,0 +1,20 @@
+name: Keep HF Space Alive
+on:
+  schedule:
+    - cron: '0 */12 * * *'  # ogni 12 ore
+  workflow_dispatch:        # puoi triggerarlo manualmente
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping HF Space
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://waveflow-portfolio-rebalancer.hf.space)
+          echo "HTTP Status: $STATUS"
+          if [ $STATUS -ne 200 ]; then
+            echo "Space down! Triggering rebuild..."
+            curl -X POST \
+              -H "Authorization: Bearer ${{ secrets.HF_TOKEN }}" \
+              "https://huggingface.co/api/spaces/waveflow/portfolio-rebalancer/restart?factory=true"
+          fi
