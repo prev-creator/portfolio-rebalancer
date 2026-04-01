@@ -15,4 +15,4 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git remote add hf https://waveflow:$HF_TOKEN@huggingface.co/spaces/waveflow/portfolio-rebalancer
-          git push hf main --force
+          git push hf main --force -- ':!images/'
