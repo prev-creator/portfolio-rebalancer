@@ -19,23 +19,36 @@ import pandas as pd
 import yfinance as yf
 import plotly.graph_objects as go
 import requests
+import uuid
+import os
 from typing import List, Dict
 from streamlit_option_menu import option_menu
-import streamlit.components.v1 as components
 
 # ==================== ANALYTICS ====================
-def inject_ga():
-    st.html("""
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN42QX8MZT"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-BN42QX8MZT');
-        </script>
-    """)
+def track_pageview():
+    # Load GA credentials from HF environment secrets
+    measurement_id = os.environ.get("GA_MEASUREMENT_ID", "")
+    api_secret = os.environ.get("GA_API_SECRET", "")
+    
+    # Skip tracking if secrets are not configured
+    if not measurement_id or not api_secret:
+        return
+    
+    # Generate a unique client_id per session
+    if "client_id" not in st.session_state:
+        st.session_state.client_id = str(uuid.uuid4())
+    
+    # Send page_view event via Measurement Protocol (server-side)
+    requests.post(
+        f"https://www.google-analytics.com/mp/collect"
+        f"?measurement_id={measurement_id}&api_secret={api_secret}",
+        json={
+            "client_id": st.session_state.client_id,
+            "events": [{"name": "page_view"}]
+        }
+    )
 
-inject_ga()
+track_pageview()
 
 # ==================== TRANSLATIONS ====================
 TRANSLATIONS = {
