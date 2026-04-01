@@ -26,19 +26,18 @@ from streamlit_option_menu import option_menu
 
 # ==================== ANALYTICS ====================
 def track_pageview():
-    # Load GA credentials from HF environment secrets
     measurement_id = os.environ.get("GA_MEASUREMENT_ID", "")
     api_secret = os.environ.get("GA_API_SECRET", "")
-    
-    # Skip tracking if secrets are not configured
     if not measurement_id or not api_secret:
         return
     
-    # Generate a unique client_id per session
+    # Track only once per session
+    if st.session_state.get("_tracked"):
+        return
+    
     if "client_id" not in st.session_state:
         st.session_state.client_id = str(uuid.uuid4())
     
-    # Send page_view event via Measurement Protocol (server-side)
     requests.post(
         f"https://www.google-analytics.com/mp/collect"
         f"?measurement_id={measurement_id}&api_secret={api_secret}",
@@ -47,6 +46,7 @@ def track_pageview():
             "events": [{"name": "page_view"}]
         }
     )
+    st.session_state["_tracked"] = True
 
 # ==================== TRANSLATIONS ====================
 TRANSLATIONS = {
